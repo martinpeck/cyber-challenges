@@ -1,7 +1,1 @@
-window.onload = function() {
-    window.document.getElementById("secret").innerText = getSecret();
-}
-
-function getSecret() {
-    return "RUMMIKUB"
-}
+var _0xfc47=["\x6F\x6E\x6C\x6F\x61\x64","\x69\x6E\x6E\x65\x72\x54\x65\x78\x74","\x73\x65\x63\x72\x65\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x64\x6F\x63\x75\x6D\x65\x6E\x74","\x52\x55\x4D\x4D\x49\x4B\x55\x42","\x53\x54\x52\x4F\x4F\x50\x57\x41\x46\x46\x4C\x45"];window[_0xfc47[0]]= function(){window[_0xfc47[4]][_0xfc47[3]](_0xfc47[2])[_0xfc47[1]]= getSecret()};function getSecret(){return _0xfc47[5]}function getSuperSecret(){return _0xfc47[6]}
