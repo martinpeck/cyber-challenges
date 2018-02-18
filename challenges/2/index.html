@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <h1>Regular Expression Test</h1>
+    <p>
+        The following Python code  will find all of the matches for a given regular expression in a string.
+        In this example, it finds all of the digits within a string, and prints the list.
+    </p>
+    <pre>
+import re
+
+# string to search
+ex = "hello1goodbye2seeya3"
+
+# compile the regular expression
+rx = re.compile("\d")
+
+# find all of the matches in ex using the regular expression
+matches = rx.findall(ex)
+
+# print all of the matches as a list ['1', '2', '3']
+print(matches)
+    </pre>
+    <p>
+        Write some code to find all of the dates, in DD/MM/YYYY format, from the following text file: <a href="test.txt">test.txt</a>
+    </p>
+    <p>
+        You can assume:
+        <ul>
+            <li>All of the dates are DD/MM/YYYY</li>
+            <li>Day and Month are always 2 digits long</li>
+            <li>Year is always 4 digits long</li>
+            <li>No dates are split across lines</li>
+        </ul>
+    </p>
+</body>
+</html>
