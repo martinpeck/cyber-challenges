@@ -1,4 +1,4 @@
-# Cyber Challenges
+# Cyber Challenges [![Build Status](https://travis-ci.org/martinpeck/cyber-challenges.svg?branch=master)](https://travis-ci.org/martinpeck/cyber-challenges)
 
 This repo contains some simple challenges that I created for my daughter.
 
