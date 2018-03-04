@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Meta Character in Regex</title>  
+    <link href="regex.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+    
+<body>
+    <div>
+    
+    <h1>MetaCharacters in Regex (Regular Expression)</h1>
+        
+    <h2 class="head1">Single Characters</h2>
+        <ul>
+            <li>\d  =  any digit from 0-9</li>
+            <li>.   =  any character</li>
+            <li>\w  =  A-Z or a-z or 0-9</li>
+            <li>\s  =  any white space</li>
+            <li>\W  =  anything that's NOT A-Z or a-z or 0-9</li>
+            <li>\S  =  anything that's NOT a white space</li>
+        </ul>
+    
+    <h3 class="head2">Single Character Examples</h3>
+        <p>An example of a telephone number could be...</p>
+        <ul>
+            <li>123 4567 8910</li>
+        </ul>
+        <p>...to write this in regex, you need to see that it is 3 digits, then a white space, then four digits, then another white space and then another four digits. You could write this a few ways:</p>
+        <ul>
+            <li>\d\d\d\s\d\d\d\d\s\d\d\d\d</li>
+            <li>\w{3}\s\w{4}\s\w{4}</li>
+        </ul>
+        <p>The second way will be explained in more detail later but basically, \w{3} means 3 of any A-Z or a-z or 0-9. These ways are specific ways but you can be more vague. Examples of this will be showed later.</p>
+        
+    <h2 class="head1">Quantifiers</h2>
+        <ul>
+            <li>*   =  zero or more times</li>
+            <li>+   =  one or more times</li>
+            <li>?   =  zero or one time (optional)</li>
+            <li>{min, max}  =  self explanitory</li>
+            <li>\w{5}       =  all 5 letter words</li>
+         </ul>
+        
+    <h3 class="head2">Quantifier Examples</h3>
+        <p>If we take our phone number of 123 4567 8910 back again. We can express this by being vague aswell. Here is one way...</p>
+        <ul>
+            <li>\d+ \d+ \d+</li>
+        </ul>
+        <p>...this one says that we need a one or more digit followed by a space then followed by one or more digit then followed by one or more digit. You can see that we don't have to put \s to indicate a space, I just put a space in the regular expression.</p>
+        <p>If we had a number of phone numbers that varied in length then quantifiers would be very useful. If there was a huge paragraph consisting of text and phone numbers and you just wanted to highlight the phne numbers then you would do this...</p>
+        <p>"You can reach me by my home phone number of 123 4567 8910 or by my work phone number of 12345 678910."</p>
+        <p>You can see that the two phone numbers have different formats so you can highlight them both by writing this:</p>
+        <ul>
+            <li>\d+ \d+ \d*</li>
+        </ul>
+        <p>This works because we are asking for one or more digits followed by one or more digits followed by zero or more digits.</p>
+    
+    <h2 class="head1">Positional Characters</h2>
+        <ul>
+            <li>^   =  beginning of a line</li>
+            <li>$   =  end of a line</li>
+            <li>\b  =  word boundrary</li>
+        </ul>
+        
+    <h3 class="head2">Positional Character Examples</h3>
+        <p>This example will show you how to highlight one word lines. If we had the peice of text...</p>
+        <ul>
+            <li>Hello</li>
+            <li>my name is</li>
+            <li>Jess</li>
+            <li>how are</li>
+            <li>you</li>
+        </ul>
+        <p>To find all one word lines, you could write       ^\w+$      This would work because it says that at the start of the line that is one or more charcters and then the line ends.</p>
+        
+    <h2 class="head1">Other Characters</h2>
+        <ul>
+            <li>[abc]  =  a or b or c</li>
+            <li>[-.]   =  a literal - or a literal .</li>
+            <li>\.     =  a literal .</li>
+            <li>\(     =  a literal (</li>
+            <li>[a-d]  =  a through d (a or b or c or d)</li>
+            <li>[^abc] =  anything apart from a, b or c (NOT a or b or c)</li>
+            <li>(now|own)  =  now or own</li>
+        </ul>
+        
+    <h3 class=head2>Other Character Examples</h3>
+        <p>In the sentence...</p>
+        <ul>
+            <li>The lynk is a link don't you think?</li>
+        </ul>
+        <p>...if you wanted to highlight the word lynk and the word link and nothing else, then you could do it this way:</p>
+        <ul>
+            <li>l[yi]nk</li>
+        </ul>
+        <p>This way you are getting an "l" followed by a "y or an "i" and then follwed by an "nk". If you wanted the word lynk or link then you could write this:</p>
+        <ul>
+            <li>(lynk|link)</li>
+        </ul>
+        <p>This way, you are getting the word "lynk" OR the word "link".</p>
+    </div>
+    </body>
+    
+</html>
